@@ -49,7 +49,7 @@ CREATE TABLE Paciente (
 	Observacion NVARCHAR(100) 
 );
 
-CREATE TABLE HistoriaPacienteMedico (
+CREATE TABLE HistoriaPaciente (
 	idHistoria INT,
 	idPaciente INT,
 	idMedico INT,
@@ -93,7 +93,7 @@ CREATE TABLE PagoPaciente (
 	FOREIGN KEY (idTurno) REFERENCES Turno (idTurno),
 );
 
-CREATE TABLE TurnoPacienteMedico (
+CREATE TABLE TurnoPaciente (
 	idTurno INT,
 	idPaciente INT,
 	idMedico INT,
