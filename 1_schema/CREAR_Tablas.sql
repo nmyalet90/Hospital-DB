@@ -6,34 +6,34 @@ GO
 
 CREATE TABLE Pais (
 	idPais CHAR(3) PRIMARY KEY,
-	Pais NVARCHAR (50)
+	Pais NVARCHAR(50)
 );
 
 CREATE TABLE Concepto (
 	idConcepto INT PRIMARY KEY,
-	Descripcion NVARCHAR
+	Descripcion NVARCHAR(50)
 );
 
 CREATE TABLE Medico (
 	idMedico INT PRIMARY KEY,
-	Nombre NVARCHAR (50),
-	Apellido NVARCHAR (50)
+	Nombre NVARCHAR(50),
+	Apellido NVARCHAR(50)
 );
 
 CREATE TABLE Especialidad (
 	idEspecialidad INT PRIMARY KEY,
-	Especialidad NVARCHAR (50)
+	Especialidad NVARCHAR(50)
 );
 
 CREATE TABLE TurnoEstado (
 	idEstado INT PRIMARY KEY,
-	Descripcion NVARCHAR
+	Descripcion NVARCHAR (50)
 );
 
 CREATE TABLE Historia (
 	idHistoria INT PRIMARY KEY,
 	fechaHistoria DATETIME,
-	Observacion NVARCHAR
+	Observacion NVARCHAR(50)
 );
 
 CREATE TABLE Paciente (
@@ -63,7 +63,7 @@ CREATE TABLE MedicoEspecialidad (
 	idEspecialidad INT,
 	FOREIGN KEY (idMedico) REFERENCES Medico (idMedico),
 	FOREIGN KEY (idEspecialidad) REFERENCES Especialidad (idEspecialidad),
-	Descripcion NVARCHAR (50)
+	Descripcion NVARCHAR(50)
 );
 
 CREATE TABLE Turno (
@@ -71,7 +71,7 @@ CREATE TABLE Turno (
 	FechaTurno DATETIME,
 	idEstado INT,
 	FOREIGN KEY (idEstado) REFERENCES TurnoEstado (idEstado),
-	Observacion NVARCHAR
+	Observacion NVARCHAR(50)
 );
 
 CREATE TABLE Pago (
@@ -81,7 +81,7 @@ CREATE TABLE Pago (
 	Fecha DATETIME,
 	Monto MONEY,
 	Estado INT,
-	Observacion NVARCHAR
+	Observacion NVARCHAR(50)
 );
 
 CREATE TABLE PagoPaciente (
