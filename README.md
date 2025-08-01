@@ -4,39 +4,51 @@ Este repositorio contiene una colección de scripts SQL desarrollados para la ge
 
 ---
 
-## 📂 Estructura del proyecto
+## 📁 Proyecto SQL - Estructura de Carpetas y Scripts
 
-   1_schema/ -- Scripts para crear tablas e insertar valores iniciales
-    -  CREAR_Tablas.sql
-    -  InsertValues.sql
+1. **`1_schema/`** – Scripts para crear tablas e insertar valores iniciales  
+   - `CREAR_Tablas.sql` – Crea las tablas principales del sistema.  
+   - `InsertValues.sql` – Inserta valores iniciales a la base de datos. 
 
-   2_data/ -- Carga inicial de médicos u otras entidades
-    -  ALTA_Medico.sql
+2. **`2_data/`** – Carga inicial de médicos u otras entidades  
+   - `ALTA_Medico.sql` – Script para registrar nuevos médicos.
 
- 3_procedures/ -- Procedimientos almacenados
-    -      ALTA_Paciente.sql
-    -  ALTA_Turno.sql
-    -  DEL_Turno.sql
-    -  UPD_Paciente.sql
-    -  UPD_Turnos.sql
-    -  JOB_CancelaTurnoVencido.sql
+3. **`3_procedures/`** – Procedimientos almacenados  
+   - `ALTA_Paciente.sql` – Agrega un nuevo paciente al sistema.  
+   - `ALTA_Turno.sql` – Registra un nuevo turno médico.  
+   - `DEL_Turno.sql` – Elimina un turno existente.  
+   - `UPD_Paciente.sql` – Actualiza los datos de un paciente.  
+   - `UPD_Turnos.sql` – Modifica información de un turno.  
+   - `JOB_CancelaTurnoVencido.sql` – Cancela automáticamente turnos vencidos mediante un job programado.
 
-     4_functions/ -- Funciones definidas por el usuario
-    -  FCN_FechaTexto.sql
+4. **`4_functions/`** – Funciones definidas por el usuario  
+   - `FCN_FechaTexto.sql` – Convierte fechas a formato de texto legible.
 
-     5_queries/ -- Consultas SELECT
-    -  SEL_EspecialidadesMedicas.sql
-    -  SEL_HistoriaPaciente.sql
-    -  SEL_TurnoPaciente.sql
+5. **`5_queries/`** – Consultas SELECT  
+   - `SEL_EspecialidadesMedicas.sql` – Lista todas las especialidades médicas registradas.  
+   - `SEL_HistoriaPaciente.sql` – Muestra la historia clínica de un paciente.  
+   - `SEL_TurnoPaciente.sql` – Consulta los turnos asociados a un paciente específico.
+
+
+---
+
+## 🧭 Diagrama de la Base de Datos
+
+A continuación se muestra el diagrama entidad-relación del sistema:
+
+![Database Diagram](database_diagram.png)
 
 
 ---
 
 ## Requisitos
 
+Alguno de los siguientes motores:
+
 - Microsoft SQL Server (se recomienda SQL Server Management Studio).
-- Base de datos: `Hospital`
-- Compatibilidad de tipos personalizados como `Paciente`, `Turno`, `Medico` si están definidos.
+- Azure SQL
+- Docker + SQL Server image
+
 
 ---
 
