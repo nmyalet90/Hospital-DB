@@ -6,29 +6,28 @@ Este repositorio contiene una colección de scripts SQL desarrollados para la ge
 
 ## 📂 Estructura del proyecto
 
-Hospital-DB/
-├── 1_schema/ -- Scripts para crear tablas e insertar valores iniciales
-│ ├── CREAR_Tablas.sql
-│ └── InsertValues.sql
-│
-├── 2_data/ -- Carga inicial de médicos u otras entidades
-│ └── ALTA_Medico.sql
-│
-├── 3_procedures/ -- Procedimientos almacenados
-│ ├── ALTA_Paciente.sql
-│ ├── ALTA_Turno.sql
-│ ├── DEL_Turno.sql
-│ ├── UPD_Paciente.sql
-│ ├── UPD_Turnos.sql
-│ └── JOB_CancelaTurnoVencido.sql
-│
-├── 4_functions/ -- Funciones definidas por el usuario
-│ └── FCN_FechaTexto.sql
-│
-├── 5_queries/ -- Consultas SELECT
-│ ├── SEL_EspecialidadesMedicas.sql
-│ ├── SEL_HistoriaPaciente.sql
-│ └── SEL_TurnoPaciente.sql
+   1_schema/ -- Scripts para crear tablas e insertar valores iniciales
+    -  CREAR_Tablas.sql
+    -  InsertValues.sql
+
+   2_data/ -- Carga inicial de médicos u otras entidades
+    -  ALTA_Medico.sql
+
+ 3_procedures/ -- Procedimientos almacenados
+    -      ALTA_Paciente.sql
+    -  ALTA_Turno.sql
+    -  DEL_Turno.sql
+    -  UPD_Paciente.sql
+    -  UPD_Turnos.sql
+    -  JOB_CancelaTurnoVencido.sql
+
+     4_functions/ -- Funciones definidas por el usuario
+    -  FCN_FechaTexto.sql
+
+     5_queries/ -- Consultas SELECT
+    -  SEL_EspecialidadesMedicas.sql
+    -  SEL_HistoriaPaciente.sql
+    -  SEL_TurnoPaciente.sql
 
 
 ---
